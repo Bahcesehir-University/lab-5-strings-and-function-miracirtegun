@@ -115,7 +115,7 @@ int MyString::length() const {
 char MyString::charAt(int index) const {
     // TODO: Return character at given index
     // Throw std::out_of_range if index is invalid (negative or >= length)
-    if(index <0|| index> data.length()){
+    if(index <0|| index> static_cast<int> (data.length())){
         throw out_of_range("");
     }
     return data[index];
