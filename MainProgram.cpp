@@ -116,8 +116,9 @@ char MyString::charAt(int index) const {
     // TODO: Return character at given index
     // Throw std::out_of_range if index is invalid (negative or >= length)
     if(index <0|| index> data.length()){
-        throw out_of_range
+        throw out_of_range("");
     }
+    return data[index];
 
 }
 
@@ -126,7 +127,7 @@ MyString MyString::substring(int start, int len) const {
     // Throw std::out_of_range if start is invalid (negative or >= length)
     // Hint: Use std::string::substr()
     if(start<0|| start >static_cast<int>(data.length())){
-        throw out_of_range
+        throw out_of_range("");
     }
     return MyString(data.substr(start, length()));
 }
